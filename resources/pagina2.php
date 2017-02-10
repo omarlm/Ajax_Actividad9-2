@@ -10,7 +10,7 @@ $conexion = mysqli_connect($server, $user, $pass,$bd) or die("Ha sucedido un err
 //Recogemos los parámetros
 $cad=json_decode(stripslashes($_REQUEST['param']));
 
-$sql = "insert into clientes (id, nombre, edad, genero, email, localidad,telefono) VALUES (NULL,'".$cad[0]->nombre."',".$cad[0]->edad.",'".$cad[0]->genero."','".$cad[0]->email."','".$cad[0]->localidad."','".$cad[0]->telefono."')";
+$sql = "insert into clientes (id, nombre, edad, genero, email, localidad,telefono) VALUES (NULL,'".$cad->nombre."',".$cad->edad.",'".$cad->genero."','".$cad->email."','".$cad->localidad."','".$cad->telefono."')";
 
 mysqli_query($conexion,$sql) or die("Problemas en el select".mysqli_error($conexion));
 
@@ -22,7 +22,7 @@ if(!$result = mysqli_query($conexion, $sql)) die();
  
 while($row = mysqli_fetch_array($result)) 
 { 
- $clientes[] = $row;
+$clientes[] = $row;
  
 }
     

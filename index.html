@@ -10,6 +10,7 @@
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="css/jquery-ui.min.css" />
+    <!--<link type="text/css" rel="stylesheet" href="css/jquery.dataTables.css" />-->
     <link type="text/css" rel="stylesheet" href="css/main.css" />
     <title>Actividad9-2</title>
 </head>
@@ -64,7 +65,7 @@
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input class="btn waves-effect waves-light right submit" type="submit" value="Insert" />
+                                    <input class="btn waves-effect waves-light right submit" id="btnInsert" type="submit" value="Insert" />
                                 </div>
                             </div>
                         </form>
@@ -72,12 +73,31 @@
                 </div>
             </div>
         </div>
+        <div class="col s12 m6 l6">
+            <div class="card-panel">
+                <table class="highlight" id="results">
+                    <thead>
+                        <tr>
+                            <th data-field="id">Id</th>
+                            <th data-field="name">Name</th>
+                            <th data-field="age">Edad</th>
+                            <th data-field="gen">Gender</th>
+                            <th data-field="email">Email</th>
+                            <th data-field="location">Location</th>
+                            <th data-field="telephone">Telephone</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!--<script type="text/javascript" src="js/jquery.dataTables.js"></script>-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/jquery.validate.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="js/additional-methods.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/validate.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
